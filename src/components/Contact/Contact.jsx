@@ -1,4 +1,4 @@
-import { deleteContact } from '../../redux/contactsSlice';
+import { deleteContact } from '../../redux/operations';
 import { useDispatch } from 'react-redux';
 
 const Contact = ({ contact }) => {
@@ -7,10 +7,8 @@ const Contact = ({ contact }) => {
   
   return (
     <>
-      <p>
-        {' '}
-        {contact.name}:
-        <span style={{ marginRight:'10px'}}>{contact.number}</span>
+      <p>{contact.name}:
+        <span style={{ margin:'0 10px'}}>{contact.phone}</span>
       </p>
       <button onClick={handleDelete}>delete</button>
     </>
